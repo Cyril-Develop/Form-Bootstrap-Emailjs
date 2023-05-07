@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send a form using Emailjs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="bg-light customForm">
+        <h1 class="text-center">Contact</h1>
+        <form class="needs-validation">
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <label for="lastname" class="form-label">Lastname :</label>
+                    <input type="text" class="form-control" id="lastname">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        3-15 characters, - authorized.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="firstname" class="form-label">Firstname :</label>
+                    <input type="text" class="form-control" id="firstname">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        3-15 characters, - authorized.
+                    </div>
+                </div>
+                <div>
+                    <label class="form-label" for="email">Email :</label>
+                    <input type="email" class="form-control" id="email">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid email.
+                    </div>
+                </div>
+                <div>
+                    <label for="message" class="form-label">Message :</label>
+                    <textarea type="text" class="form-control" id="message" rows="5"></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        minimum 10 characters.
+                    </div>
+                </div>
+                
+                <div class="d-grid col-sm-6 mx-auto">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="./app.js"></script>
+
+    <!-- Email.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("iZWW71m4vemA0AXSt");
+        })();
+    </script>
+</body>
+
+</html>
